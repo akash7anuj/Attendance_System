@@ -1,0 +1,141 @@
+{
+    "Friday": [
+        [
+            "20:04",
+            "20:05",
+            "English Language & Communication"
+        ],
+        [
+            "21:49",
+            "21:51",
+            "Programming with Java"
+        ],
+        [
+            "21:52",
+            "21:54",
+            "Computer Architecture & Organization"
+        ],
+        [
+            "21:55",
+            "21:57",
+            "Data Structures using C Laboratory"
+        ]
+    ],
+    "Monday": [
+        [
+            "10:00",
+            "11:00",
+            "English Language & Communication"
+        ],
+        [
+            "11:00",
+            "12:00",
+            "Data Structures using C"
+        ],
+        [
+            "12:00",
+            "1:00",
+            "Front End Development"
+        ],
+        [
+            "21:50",
+            "21:51",
+            "Programming with Java"
+        ],
+        [
+            "22:02",
+            "22:03",
+            "Computer Architecture & Organization"
+        ]
+    ],
+    "Saturday": [
+        [
+            "17:57",
+            "17:59",
+            "Programming with Java Laboratory"
+        ],
+        [
+            "11:56",
+            "11:57",
+            "Data Structures using C"
+        ],
+        [
+            "22:50",
+            "22:51",
+            "Programming with Java"
+        ],
+        [
+            "16:40",
+            "16:41",
+            "Computer Architecture & Organization"
+        ]
+    ],
+    "Sunday": [
+        [
+            "18:23",
+            "18:24",
+            "Computer Architecture & Organization"
+        ],
+        [
+            "21:48",
+            "21:49",
+            "Business Presentation & Language Laboratory"
+        ]
+    ],
+    "Thursday": [
+        [
+            "09:47",
+            "09:49",
+            "Front End Development"
+        ],
+        [
+            "11:00",
+            "12:00",
+            "Computer Architecture & Organization"
+        ],
+        [
+            "12:00",
+            "1:00",
+            "Data Structures using C"
+        ],
+        [
+            "2:00",
+            "3:00",
+            "Business Presentation & Language Laboratory"
+        ]
+    ],
+    "Tuesday": [
+        [
+            "20:04",
+            "20:05",
+            "English Language & Communication"
+        ],
+        [
+            "11:00",
+            "12:00",
+            "Programming with Java"
+        ],
+        [
+            "12:20",
+            "12:23",
+            "Computer Architecture & Organization"
+        ],
+        [
+            "22:09",
+            "22:10",
+            "Data Structures using C Laboratory"
+        ]
+    ],
+    "Wednesday": [
+        [
+            "13:01",
+            "13:03",
+            "Front End Development"
+        ],
+        [
+            "11:00",
+            "12:00",
+            "Front End Development Laboratory"
+        ]
+    ]
+}

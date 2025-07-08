@@ -1,0 +1,15 @@
+Flask
+Flask-Login
+opencv-python
+numpy
+pandas
+face-recognition
+dlib
+datetime
+os
+time
+threading
+requests
+json
+subprocess
+logging

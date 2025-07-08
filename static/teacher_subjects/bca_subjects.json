@@ -1,0 +1,41 @@
+[
+    {
+        "teacher": "Rajesh Dey",
+        "subject": "Computer Architecture & Organization"
+    },
+    {
+        "Course Code": "BC24-AEC-202",
+        "subject": "English Language & Communication",
+        "teacher": "Ananya Singh"
+    },
+    {
+        "Course Code": "BC24-AEC-203",
+        "subject": "Front End Development",
+        "teacher": "Ankit Kishore Sen"
+    },
+    {
+        "Course Code": "BC24-AEC-204",
+        "subject": "Programming with Java",
+        "teacher": "Soumick Adhikary"
+    },
+    {
+        "Course Code": "BC24-AEC-292",
+        "subject": "Business Presentation & Language Lab",
+        "teacher": "Ananya Singh"
+    },
+    {
+        "Course Code": "BC24-AEC-293",
+        "subject": "Front End Development Lab",
+        "teacher": "Ankit Kishore Sen"
+    },
+    {
+        "Course Code": "BC24-AEC-204",
+        "subject": "Programming with Java Lab",
+        "teacher": "Soumick Adhikary"
+    },
+    {
+        "Course Code": "BC24-AEC-999",
+        "subject": "Human Computer Interaction",
+        "teacher": "Anuj Kumar"
+    }
+]

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body style="background-color: #f8f9fa;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand fa-2x" href="#">Attendance System</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <!-- Teacher Management -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Manage Teachers</h5>
+                        <p>Upload and update teacher profiles</p>
+                        <a href="/teachers" class="btn btn-outline-primary">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Management -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Manage Students</h5>
+                        <p>Upload student images per class</p>
+                        <a href="/students" class="btn btn-outline-success">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timetable Management -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-calendar-alt fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Timetable & Subjects</h5>
+                        <p>Manage timetable and subjects for all classes</p>
+                        <a href="/timetable" class="btn btn-outline-info">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Attendance Download -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-file-download fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Download Attendance</h5>
+                        <p>Export attendance in .txt by date</p>
+                        <a href="/attendance" class="btn btn-outline-warning">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recorded Videos -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-video fa-3x text-danger mb-3"></i>
+                        <h5 class="card-title">Recorded Videos</h5>
+                        <p>View & Download class recordings</p>
+                        <a href="/recordings" class="btn btn-outline-danger">Go</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Streaming -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-broadcast-tower fa-3x text-secondary mb-3"></i>
+                        <h5 class="card-title">Live Streaming</h5>
+                        <p>Watch live classroom streams</p>
+                        <a href="/livestream" class="btn btn-outline-secondary">Go</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center py-3 bg-dark text-white">
+        &copy; 2025 Attendance System | Powered by ANUJ
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

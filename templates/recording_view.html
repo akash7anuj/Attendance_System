@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Video - {{ classname.upper() }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="margin:0; background-color:#000;">
+    <video controls autoplay style="width:100vw; height:100vh; object-fit:contain;">
+        <source src="/video/{{ classname }}/{{ date }}/{{ filename }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</body>
+</html>

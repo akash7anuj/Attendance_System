@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Teachers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .option-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            background: #fff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center">View Teachers</h2>
+
+    <div id="teacherList" class="row g-3"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    loadTeachers();
+
+    function loadTeachers() {
+        $('#teacherList').empty();
+
+        $.get('/get_teachers', function(data) {
+            $.each(data, function(i, teacher) {
+                $('#teacherList').append(`
+                    <div class="col-md-3">
+                        <div class="card shadow-sm text-center">
+                            <img src="/static/teacher_images/${teacher.filename}" 
+                                 class="card-img-top" 
+                                 style="height:200px; object-fit:cover; object-position:center 20%;">
+                            <div class="card-body">
+                                <h5>${teacher.name}</h5>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a href="/static/teacher_images/${teacher.filename}" target="_blank" class="btn btn-primary btn-sm">View</a>
+                                    <a href="/download_teacher/${teacher.filename}" class="btn btn-success btn-sm">Download</a>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteTeacher('${teacher.filename}')">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `);
+            });
+        });
+    }
+
+    window.deleteTeacher = function(filename) {
+        if (confirm("Are you sure to delete this teacher?")) {
+            $.post('/delete_teacher/' + filename, function() {
+                loadTeachers();
+            });
+        }
+    }
+});
+</script>
+
+</body>
+</html>

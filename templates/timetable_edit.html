@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Timetable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+
+    <h2 class="text-center mb-4">Edit Timetable</h2>
+
+    <div class="mb-3">
+        <label>Class:</label>
+        <input type="text" id="className" class="form-control" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label>Select Day:</label>
+        <select id="daySelect" class="form-select">
+            <option value="">-- Select Day --</option>
+            <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+            <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+        </select>
+    </div>
+
+    <div class="row g-3 mb-3">
+        <div class="col-md-3"><input type="text" id="startTime" class="form-control" placeholder="Start Time"></div>
+        <div class="col-md-3"><input type="text" id="endTime" class="form-control" placeholder="End Time"></div>
+        <div class="col-md-4"><input type="text" id="subject" class="form-control" placeholder="Subject"></div>
+        <div class="col-md-2"><button class="btn btn-success w-100" id="addRow">Add</button></div>
+    </div>
+
+    <table class="table table-bordered" id="timetableTable">
+        <thead><tr><th>Day</th><th>Start</th><th>End</th><th>Subject</th><th>Action</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="text-center">
+        <button class="btn btn-primary" id="saveTimetable">Save Timetable</button>
+    </div>
+
+</div>
+
+<script>
+let timetable = {};
+let className = new URLSearchParams(window.location.search).get('class');
+$('#className').val(className);
+
+// Load existing timetable
+$.ajax({
+    url: '/load_timetable',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify({ className: className }),
+    success: function(data) {
+        timetable = data || {};
+        renderTable();
+    }
+});
+
+function renderTable() {
+    $('#timetableTable tbody').empty();
+    for (let day in timetable) {
+        timetable[day].forEach((slot, index) => {
+            $('#timetableTable tbody').append(`
+                <tr data-day="${day}" data-index="${index}">
+                    <td>${day}</td><td>${slot[0]}</td><td>${slot[1]}</td><td>${slot[2]}</td>
+                    <td><button class="btn btn-danger btn-sm deleteRow">Delete</button></td>
+                </tr>
+            `);
+        });
+    }
+}
+
+$('#addRow').click(function() {
+    const day = $('#daySelect').val();
+    const start = $('#startTime').val();
+    const end = $('#endTime').val();
+    const subject = $('#subject').val();
+
+    if(!day || !start || !end || !subject) {
+        alert("Fill all fields.");
+        return;
+    }
+
+    if (!timetable[day]) timetable[day] = [];
+    timetable[day].push([start, end, subject]);
+    renderTable();
+
+    $('#startTime, #endTime, #subject').val('');
+});
+
+$('#timetableTable').on('click', '.deleteRow', function() {
+    const row = $(this).closest('tr');
+    const day = row.data('day');
+    const index = row.data('index');
+    timetable[day].splice(index, 1);
+    if (timetable[day].length === 0) delete timetable[day];
+    renderTable();
+});
+
+$('#saveTimetable').click(function() {
+    $.ajax({
+        url: '/save_timetable',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ className: className, timetable: timetable }),
+        success: function(response) {
+            alert(response);
+            window.location.href = '/view_timetable';
+        }
+    });
+});
+</script>
+
+</body>
+</html>
