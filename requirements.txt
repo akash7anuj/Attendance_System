@@ -6,9 +6,3 @@ pandas
 face-recognition
 dlib
 datetime
-time
-threading
-requests
-json
-subprocess
-logging
