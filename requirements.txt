@@ -6,7 +6,6 @@ pandas
 face-recognition
 dlib
 datetime
-os
 time
 threading
 requests
