@@ -16,7 +16,7 @@ When the attendance system uses a mobile camera, the class starts based on the t
 - **Teacher and student seen time:** 2 seconds  
 - **Eye blink detection** is required for liveness verification
 
-![alt text](image/start_attendance.png)
+![alt text](image/taking_attendance.png)
 
 ---
 
