@@ -362,6 +362,7 @@ Students must be consistently visible for a given threshold time to be considere
 * Logged but ignored for attendance.
 
 ![alt text](image/taking_attendance.png)
+![alt text](image/start_attendance.png)
 
 ---
 
