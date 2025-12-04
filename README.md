@@ -536,16 +536,7 @@ Start Flask + Main Thread
 1. **Server for Global Use**  
    Implement a centralized server to enable access and usage of the attendance system globally.
 
-2. **Database Connectivity**  
-   Integrate a database (MongoDB) to store and manage attendance, user details, and class records efficiently.
-
-3. **Mobile Responsive Design**  
-   Make the web interface fully responsive to ensure smooth usage across all screen sizes and mobile devices.
-
-4. **Student Attendance Notifications**  
-   Add a notification feature to inform students about their daily attendance summary.
-
-5. **Dual Camera Support**  
+2. **Dual Camera Support**  
    Enable the system to use dual cameras simultaneously for better accuracy and coverage during attendance.
 
 ---
